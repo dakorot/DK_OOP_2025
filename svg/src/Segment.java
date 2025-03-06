@@ -4,6 +4,12 @@ public class Segment {
     public Point a;
     public Point b;
 
+    public Segment(Point a, Point b)
+    {
+        this.a = new Point(a); //wykorzystujemy konstruktor kopiujący
+        this.b = new Point(b);
+    }
+
     public double length() {
         return Math.sqrt(pow(a.getX() - b.getX(), 2) + pow(a.getY() - b.getY(), 2));
     }

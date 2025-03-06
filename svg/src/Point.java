@@ -6,9 +6,17 @@ public class Point {
         this.y = y;
     }
 
+    //konstruktor pusty
     public Point() {
         this.x = 0;
         this.y = 0;
+    }
+
+    //konstruktor kopiujący
+    public Point(Point otherPoint)
+    {
+        this.x = otherPoint.x;
+        this.y = otherPoint.y;
     }
 
     public double getX() {

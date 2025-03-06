@@ -54,3 +54,14 @@ public class Main {
         scene.save("rysunek.svg");
     }
 }
+
+/*
+* Polygon:
+* dodać klasę Style z polami fill, stroke, stroke_width
+* dodać pole style w tej klasie
+* zamienić atrybut style = (line 69)
+*
+* Main:
+* utworzyć obiekt Style i przypisać do utworzonych poligonów (jako referencja)
+* zmienić style w main i zaobserwować zmianę we wszystkich wielokątach
+* */

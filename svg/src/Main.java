@@ -1,5 +1,7 @@
+import java.io.IOException;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Point p1 = new Point(30, 40);
         Point p2 = new Point();
         p2.setY(20);
@@ -31,11 +33,24 @@ public class Main {
         SvgScene scene = new SvgScene();
         scene.addPolygon(pol);
         scene.addPolygon(polCopy);
-        System.out.println(scene);
+        polCopy.setPoint(0, -50, -50);
+        polCopy.setPoint(1, 0, 0);
+        polCopy.setPoint(2, 100, -30);
+
+        Polygon square = new Polygon(new Point[]{new Point(70,70),
+                                                new Point(130, 70),
+                                                new Point(130, 130),
+                                                new Point(70, 130)}
+        );
+        scene.addPolygon(square);
 
         polCopy.setPoint(1, -50, 40);
         System.out.println(scene);
 
         pol.toSvg();
+
+        System.out.println(polCopy.boundingBox());
+
+        scene.save("rysunek.svg");
     }
 }

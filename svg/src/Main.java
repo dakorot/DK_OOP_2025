@@ -11,5 +11,21 @@ public class Main {
         System.out.println(seg);
         p2.setX(60);
         System.out.println(seg);
+
+        Point[] arr = {p1, p2, p1};
+        arr[2] = new Point(30, 0);
+        p2.setX(0);
+
+        Polygon pol = new Polygon(arr);
+        System.out.println(pol);
+
+        Polygon polCopy = new Polygon(pol);
+        System.out.println(polCopy);
+
+        pol.setPoint(1, 0, 40);
+        System.out.println("Poly: " + pol);
+        System.out.println("PolCopy: " + polCopy);
+
+        System.out.println(pol.toSvg());
     }
 }

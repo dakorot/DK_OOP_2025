@@ -13,10 +13,10 @@ public class Point {
     }
 
     //konstruktor kopiujący
-    public Point(Point otherPoint)
+    public Point(Point other)
     {
-        this.x = otherPoint.x;
-        this.y = otherPoint.y;
+        this.x = other.x;
+        this.y = other.y;
     }
 
     public double getX() {

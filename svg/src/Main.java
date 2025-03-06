@@ -27,5 +27,15 @@ public class Main {
         System.out.println("PolCopy: " + polCopy);
 
         System.out.println(pol.toSvg());
+
+        SvgScene scene = new SvgScene();
+        scene.addPolygon(pol);
+        scene.addPolygon(polCopy);
+        System.out.println(scene);
+
+        polCopy.setPoint(1, -50, 40);
+        System.out.println(scene);
+
+        pol.toSvg();
     }
 }

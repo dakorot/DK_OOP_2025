@@ -20,8 +20,8 @@ public class Main {
 
         seg.a.x = 1.0;
         seg.a.y = 1.0;
-        seg.b.x = 5.0;
-        seg.b.y = 4.0;
+        seg.b.x = 212.0;
+        seg.b.y = 113.0;
 
         System.out.println("Seg length: " + seg.length());
 
@@ -37,5 +37,7 @@ public class Main {
 
         Segment longest = Segment.maxSegment(tab);
         System.out.println("Longest: " + longest.length());
+        System.out.println("Segment: " + longest.toString());
+        System.out.println("Line: \n" + seg.toSvg());
     }
 }

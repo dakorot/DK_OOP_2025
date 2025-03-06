@@ -20,4 +20,14 @@ public class Segment {
 
         return max;
     }
+
+    public String toSvg() {
+        return "<line x1=\"" + a.x + "\" y1=\"" + a.y + "\" x2=\"" + b.x + "\" y2=\"" + b.y + "\" style=\"stroke:blue;stroke-width:5\" />";
+    }
+
+    @Override
+    public String toString()
+    {
+        return "(" + a.x + ", " + a.y + ")" + "<->" + "(" + b.x + ", " + b.y +")";
+    }
 }

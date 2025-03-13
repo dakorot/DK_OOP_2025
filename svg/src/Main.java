@@ -59,7 +59,7 @@ public class Main {
 * Polygon:
 * dodać klasę Style z polami fill, stroke, stroke_width
 * dodać pole style w tej klasie
-* zamienić atrybut style = (line 69)
+* zamienić atrybut style = (line 69) //wartości none, purple, 3
 *
 * Main:
 * utworzyć obiekt Style i przypisać do utworzonych poligonów (jako referencja)

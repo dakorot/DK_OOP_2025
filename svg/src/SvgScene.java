@@ -4,25 +4,25 @@ import java.util.Arrays;
 
 public class SvgScene {
 
-    private final Polygon[] polygons;
+    private final Shape[] shapes    ;
     private int ix;
 
     public SvgScene()
     {
-        this.polygons = new Polygon[3];
+        this.shapes = new Polygon[3];
         ix = 0;
     }
 
-    public void addPolygon(Polygon poly)
+    public void addPolygon(Shape shape)
     {
-        this.polygons[ix] = poly;
-        ix = (ix + 1) % polygons.length;
+        this.shapes[ix] = shape;
+        ix = (ix + 1) % shapes.length;
     }
 
     public String toSvg()
     {
         StringBuilder sb = new StringBuilder();
-        for(Polygon p : polygons)
+        for(Shape p : shapes)
         {
             if(p!=null)
                 sb.append(p.toSvg()).append("\n");
@@ -34,7 +34,7 @@ public class SvgScene {
     @Override
     public String toString() {
         return "SvgScene{" +
-                "polygons=" + Arrays.toString(polygons) +
+                "polygons=" + Arrays.toString(shapes) +
                 '}';
     }
 
@@ -45,7 +45,7 @@ public class SvgScene {
         double minY = Double.POSITIVE_INFINITY;
         double maxY = Double.NEGATIVE_INFINITY;
 
-        for(Polygon p : polygons)
+        for(Shape p : shapes)
         {
             if(p!=null)
             {
@@ -66,7 +66,7 @@ public class SvgScene {
         writer.write(" <svg width=\"" + bb.width() + "\" height=\"" + bb.height());
         writer.write("\" viewBox=\"" + bb.x() + " " + bb.y() + " " + bb.width() + " " + bb.height() + "\"" + " xmlns=\"http://www.w3.org/2000/svg\"\">\n");
 
-        for(Polygon p : polygons)
+        for(Shape p : shapes)
         {
             if(p!=null)
             {

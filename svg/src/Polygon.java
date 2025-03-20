@@ -1,4 +1,4 @@
-public class Polygon extends Shape{
+public class Polygon extends Shape {
     private final Point[] vertices;
 
     public static Polygon square(Segment diagonal, Style style){
@@ -35,6 +35,7 @@ public class Polygon extends Shape{
         this.vertices[ix].setY(y);
     }
 
+    @Override
     public BoundingBox boundingBox(){
         if(vertices.length == 0){
             return null;
